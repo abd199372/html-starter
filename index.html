@@ -46,11 +46,61 @@
         .fancy-button i {
             margin-right: 10px;
         }
+        .fancy-title {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            text-transform: capitalize;
+        }
+        .fancy-title .highlight {
+            display: block;
+            color: #3498db;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .fancy-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #3498db;
+            margin: 15px auto;
+        }
+        .arabic-note {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .animated-text {
+            background: linear-gradient(45deg, #3498db, #2980b9, #9b59b6, #8e44ad);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: gradient-animation 8s ease infinite, bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Contact Abdulrahman Bilal</h1>
+        <h1 class="fancy-title"><span class="animated-text">Contact</span> <span class="highlight animated-text">Abdulrahman Bilal</span></h1>
+        <p class="arabic-note">انقر على الأزرار أدناه للتواصل</p>
         <a href="tel:+9647700258898" class="fancy-button"><i class="fas fa-phone"></i>Phone</a>
         <a href="mailto:abdulrahman.b@sc.uobaghdad.edu.iq" class="fancy-button"><i class="fas fa-envelope"></i>University Email</a>
         <a href="mailto:abd199372@gmail.com" class="fancy-button"><i class="fas fa-envelope"></i>Personal Email</a>
